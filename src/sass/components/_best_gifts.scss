@@ -1,0 +1,22 @@
+.best-gifts {
+  background: url(../img/snow.png), $color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & .cursive {
+    text-align: center;
+  }
+  & h2 {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  &__block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

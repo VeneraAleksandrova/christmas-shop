@@ -1,0 +1,10 @@
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+  padding-left: 82px;
+  padding-right: 82px;
+  @include media-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

@@ -1,0 +1,61 @@
+.about {
+  background: url(../img/snow.png), $color-primary;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    background: $color-text-light;
+    border-radius: 20px;
+    margin: auto;
+    height: 528px;
+    @include media-mobile {
+      flex-direction: column;
+      height: 880px;
+    }
+  }
+  &__title {
+    padding: 160px 152px 160px 60px;
+    min-width: calc(100% / 2);
+    @include media-content {
+      padding: 106px 60px;
+    }
+    @include media-mobile {
+      padding: 60px 20px;
+    }
+    & h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: $color-text;
+      text-align: left;
+    }
+  }
+  &__desc {
+    @include font(1.6em, 400);
+  }
+  &__img {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: calc(100% / 2);
+    border-radius: 20px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include media-content {
+        flex-shrink: 0;
+        width: 170%;
+        height: 114%;
+      }
+    }
+  }
+}

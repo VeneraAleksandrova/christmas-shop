@@ -1,0 +1,31 @@
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include media-mobile {
+    gap: 0;
+  }
+}
+.filter {
+  padding: 11px 20px;
+  border-radius: 12px;
+  @include font(1.2em, 600, 156%);
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  @include media-mobile {
+    padding: 11px 8px;
+  }
+  &:hover {
+    @include hover {
+      background-color: $color-active;
+    }
+  }
+}
+
+.active-filter {
+  background-color: $color-active;
+  cursor: default;
+}

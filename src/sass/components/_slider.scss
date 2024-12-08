@@ -1,0 +1,101 @@
+.slider {
+  color: $color-text-light;
+  background: url(../img/snow.png), $color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 0;
+  padding-right: 0;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+
+  & h2 {
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+  & h2,
+  & .cursive {
+    text-align: center;
+  }
+  &__block {
+    padding: 60px 0;
+  }
+  &-text {
+    @include font(8em, 600);
+    text-transform: uppercase;
+    margin-right: 21px;
+  }
+  &-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 21px;
+    border-radius: 20px;
+  }
+}
+
+.sliders {
+  width: 100%;
+  overflow: hidden;
+  &__buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    padding-left: 82px;
+    padding-right: 82px;
+
+    @include media-laptop {
+      margin-right: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+  &-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid $color-text-light;
+    transition: all 0.5s ease;
+    background: none;
+    &:first-child {
+      margin-right: 20px;
+    }
+    &:hover {
+      @include hover {
+        background-color: $color-text-light;
+        & svg path {
+          stroke: $color-primary;
+        }
+      }
+    }
+    &:active {
+      border: 1px solid $color-text-light;
+      background: none;
+      & svg path {
+        stroke: $color-text-light;
+      }
+    }
+  }
+}
+
+.inactive {
+  border: 1px solid $color-inactive;
+  cursor: default;
+  pointer-events: none;
+  & svg path {
+    stroke-opacity: 0.4;
+  }
+}
+
+.slider-line {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  left: 0;
+  width: 2183px;
+  @include media-laptop {
+    width: 2023px;
+  }
+}

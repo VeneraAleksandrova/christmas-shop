@@ -1,0 +1,51 @@
+.cta {
+  background: url(../img/snow.png), url(../img/fon1.png) $color-primary;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & .cta-h2 {
+    width: 426px;
+    line-height: 150%;
+    @include media-mobile {
+      width: 100%;
+    }
+  }
+  & .btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &-time {
+    border-radius: 20px;
+    padding: 8px 12px 12px 12px;
+    background: $color-inactive;
+    color: $color-text-light;
+    display: flex;
+    margin-top: 8px;
+    max-width: 100%;
+    &__block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 80px;
+      height: 52px;
+      position: relative;
+      &:not(:last-child)::after {
+        content: "";
+        height: 20px;
+        width: 1px;
+        background: $color-inactive;
+        position: absolute;
+        right: 0;
+        top: 35%;
+      }
+    }
+  }
+}

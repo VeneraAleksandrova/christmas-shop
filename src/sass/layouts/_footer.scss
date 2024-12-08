@@ -1,0 +1,87 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h2,
+  & h3,
+  & .cursive {
+    color: $color-text;
+    text-align: center;
+    &:hover {
+      @include hover {
+        color: $color-primary;
+      }
+    }
+  }
+  & .links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    @include media-content {
+      flex-direction: column;
+    }
+    &__block {
+      background: $color-content-background;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      height: 204px;
+      min-width: 32.7%;
+      @include media-content {
+        width: 100%;
+      }
+      &:hover h2,
+      &:hover h3 {
+        @include hover {
+          color: $color-primary;
+        }
+      }
+      & img {
+        max-width: 80px;
+        object-fit: cover;
+        margin: auto;
+      }
+      & h2 {
+        margin-top: 13px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .socials {
+    margin-top: 60px;
+    margin-bottom: 12px;
+    display: flex;
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      &:hover svg path {
+        @include hover {
+          stroke: $color-primary;
+        }
+      }
+      & svg {
+        margin: auto;
+        display: block;
+      }
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+.copyright {
+  @include font(1.6em, 400);
+  text-align: center;
+}

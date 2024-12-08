@@ -1,0 +1,29 @@
+.gift {
+  width: 310px;
+  height: 342px;
+  border-radius: 20px;
+  background: $color-content-background;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    padding: 20px;
+    background: $color-text-light;
+    border-radius: 20px;
+    height: 112px;
+    width: 100%;
+  }
+  & h3 {
+    margin-top: 7px;
+    transition: all 0.5s ease;
+  }
+  &:hover h3 {
+    @include hover {
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.header {
+  transition: all 0.5s ease;
+  @include font(1.2em, 600, 130%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  &__block {
+    @include columns(center);
+  }
+  & .wrapper {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.nav-list,
+.nav-list__items {
+  display: flex;
+  gap: 8px;
+  @include media-laptop {
+    display: none;
+  }
+}
+.list__item {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  &:hover {
+    @include hover {
+      background: $color-backgrd-hover;
+      color: $color-primary;
+    }
+  }
+}
+
+.inactive__item {
+  background: $color-backgrd-hover;
+  color: $color-primary;
+  cursor: default;
+}
+
+.disable {
+  pointer-events: none;
+}

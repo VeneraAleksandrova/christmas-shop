@@ -1,0 +1,40 @@
+.burger {
+  display: none;
+  position: relative;
+  z-index: 3;
+  height: 40px;
+  width: 40px;
+  transition: all 1s ease;
+  @include media-laptop {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    transition: all 0.3s ease;
+    background: $color-text;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+  &::after {
+    content: "";
+    width: 20px;
+    height: 1px;
+    transition: all 0.3s ease;
+    background: $color-text;
+    position: absolute;
+    bottom: 16px;
+    left: 10px;
+  }
+}
+.burger_active::before {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.burger_active::after {
+  transform: rotate(-45deg);
+  bottom: 19px;
+}

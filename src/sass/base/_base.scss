@@ -1,0 +1,77 @@
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// * {
+//   border: 1px solid red;
+//   box-sizing: border-box;
+// }
+a {
+  text-decoration: none;
+  color: $color-text;
+  transition: all 0.5s ease;
+  .disable {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+main {
+  background: $color-text-light;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+h1 {
+  @include font(3.2em);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  @include font(2.4em, 600, 150%);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $color-text-light;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+h3 {
+  @include font(1.6em);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-text;
+  transition: all 0.5s ease;
+}
+h4 {
+  @include font(1.2em);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.cursive {
+  font-family: "Allura", serif;
+  @include font(2.4em, 400, 100%);
+  letter-spacing: 0.05em;
+  color: $color-text-light;
+  &__colored {
+    color: $color-primary;
+  }
+}
+
+.arrow-active path {
+  stroke-opacity: 1;
+}
+
+svg path {
+  transition: all 0.5s ease;
+}

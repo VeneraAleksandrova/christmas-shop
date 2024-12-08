@@ -1,0 +1,65 @@
+.modal-menu {
+  height: 100%;
+  background: $color-text-light;
+  position: fixed;
+  z-index: 2;
+  left: 100%;
+  top: 0;
+  padding-top: 64px;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  left: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: left 0.5s ease;
+  @include media-laptop {
+    //display: flex;
+  }
+}
+
+.menu__visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  & .list__item {
+    @include font(2.4em, 600, 152%);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+}
+.menu_open {
+  animation-name: menu_open;
+  animation-duration: 1s;
+}
+.menu_close {
+  animation-name: menu_close;
+  animation-duration: 1s;
+}
+
+@keyframes menu_open {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes menu_close {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}

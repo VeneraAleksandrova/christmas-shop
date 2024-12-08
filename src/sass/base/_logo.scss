@@ -1,0 +1,16 @@
+.logo {
+  cursor: pointer;
+  padding: 0px 20px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  border-radius: 12px;
+}
+
+.logo-obj {
+  width: 24px;
+  margin-right: 8px;
+  height: 24px;
+}

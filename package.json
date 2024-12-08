@@ -1,0 +1,19 @@
+{
+  "name": "chrismas-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "style": "sass --watch src/sass/style.scss src/sass/style.css",
+    "build": "webpack --watch"
+  },
+  "dependencies": {
+    "normalize-scss": "^8.0.0",
+    "sass": "^1.80.4",
+    "webpack": "^5.96.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
