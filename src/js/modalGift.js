@@ -1,5 +1,5 @@
 import { activeBodyHidden } from "./bodyHidden";
-
+import { hiddenScrollRight } from "./scrollRight";
 const modal_gift = document.querySelector(".modal-gift");
 
 function renderModalGift({ name, description, category, superpowers }) {
@@ -36,9 +36,12 @@ function closeModalGift(e) {
     (e.target.classList.contains("modal-gift") &&
       !e.target.classList.contains("gift-wrapper"))
   ) {
+    const clientWidth = document.documentElement.clientWidth;
+
     modal_gift.innerHTML = ``;
     modal_gift.style.display = "none";
     activeBodyHidden(false);
+    hiddenScrollRight(document.documentElement.clientWidth, clientWidth);
   }
 }
 

@@ -1,5 +1,6 @@
 import { data } from "../json";
 import { renderModalGift } from "./modalGift";
+import { hiddenScrollRight } from "./scrollRight";
 import { activeBodyHidden } from "./bodyHidden";
 function renderGiftContainer(filter) {
   const gift_container = document.querySelector(".gift-container");
@@ -41,8 +42,10 @@ function renderGift({ name, category }, block) {
 }
 
 function openModalGift(id) {
+  const clientWidth = document.documentElement.clientWidth;
   renderModalGift(data.find((gift) => gift.name === id));
   activeBodyHidden(true);
+  hiddenScrollRight(document.documentElement.clientWidth, clientWidth);
 }
 
 export { renderGift, renderGiftContainer };
